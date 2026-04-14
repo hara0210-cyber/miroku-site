@@ -1,4 +1,5 @@
 import FadeInView from "@/components/FadeInView";
+import Image from "next/image";
 import { LINE_URL } from "@/data/site-data";
 
 export default function LINESection() {
@@ -34,21 +35,14 @@ export default function LINESection() {
 
             {/* QR Code */}
             <div className="flex flex-col items-center gap-4 shrink-0">
-              {/*
-                TODO: /public/images/line-qr.png に LINE公式アカウントのQRコード画像を配置してください。
-                配置後、以下の div を next/image の Image コンポーネントに差し替えてください。
-                例:
-                  import Image from "next/image";
-                  <Image src="/images/line-qr.png" alt="公式LINE QRコード" width={160} height={160} />
-              */}
-              <div className="w-40 h-40 bg-white p-3 flex items-center justify-center">
-                <div className="w-full h-full border border-dashed border-gray-300 flex flex-col items-center justify-center gap-1">
-                  <span className="text-[10px] text-gray-400 text-center leading-relaxed tracking-wide">
-                    QRコード
-                    <br />
-                    ここに配置
-                  </span>
-                </div>
+              <div className="w-44 h-44 bg-white p-3 flex items-center justify-center">
+                <Image
+                  src="/images/line-qr.jpg"
+                  alt="公式LINE QRコード"
+                  width={160}
+                  height={160}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <p className="text-[11px] tracking-[0.15em] text-white/35 text-center">
                 スマートフォンで読み取り
