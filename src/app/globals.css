@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #0C0C0C;
+  --color-warm-gray: #F5F3F0;
+  --color-warm-gray-dark: #E8E4DF;
+  --color-champagne: #B8A88A;
+  --color-champagne-light: #C4B590;
+  --color-champagne-pale: #D4C9B0;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #6B6560;
+  --color-text-tertiary: #9B9590;
+  --color-border-light: #E5E0DA;
+  --color-border-dark: #2A2A2A;
+
+  --font-serif: 'Cormorant Garamond', 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background-color: #FFFFFF;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+}
+
+/* Serif headings */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Section spacing */
+.section-padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+/* Champagne gold line accent */
+.gold-line {
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-champagne);
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F3F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8A88A;
+  border-radius: 3px;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(184, 168, 138, 0.2);
+  color: #0C0C0C;
+}
